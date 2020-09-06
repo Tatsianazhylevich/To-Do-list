@@ -32,7 +32,6 @@ body {
 }
 .add{
     display: flex;
-    /* align-items: center; */
     justify-content: space-around;
     padding: 7vh;
 }
@@ -83,16 +82,12 @@ body {
 .task_item{
     display: flex;
     justify-content: space-between;
-
-}
-
-li{
     margin-bottom: 5px;
     font-size: 25px;
-    
 }
+
 .task_date{
-    font-size: 15px;
+    font-size: 18px;
 }
 
 .task_text:hover, .arrow-right:hover, .arrow-right-in-progress:hover, .arrow-left:hover {
@@ -116,14 +111,7 @@ li{
     background: url(./img/delete.png) no-repeat center/ 100%;
     filter: invert();
 }
-/* .arrow:after{
-    background: white;
-    mix-blend-mode: screen;
-} */
 
-img{
-    color: white;
-}
 h1{
     font-family: 'Amatic SC', cursive;
     font-size: calc(15px + 7vh);
