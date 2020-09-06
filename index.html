@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Pangolin&display=swap" rel="stylesheet">
+    <script defer type= "text/javascript" src="./script.js"></script>
+    <title>To Do List</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="inner">
+            <h1>My To-Do List</h1>
+            <div class="add">
+                <input type="text" class="add_text" placeholder="Добавить в список">
+                <input type="date" class="add_date" id="date">
+                <button class="add_button"><b>+</b> Добавить</button>
+            </div>
+        </header>
+        
+        <div class="container">
+            <div class="task">
+                <h2>Задачи:</h2>
+                <ul class='task-todo task_list'>
+                    <!-- <li class="task_item">
+                        <p class="task_text">Выбросить мусор</p>
+                        <span class="task_icon arrow-right">
+                        </span>
+                        <span class="task_icon trash"></span>
+                    </li> -->
+                </ul>
+                <button class="button_clear" id="button-clear-todo">Очистить все</button>
+            </div>
+    
+            <div class="task">
+                <h2>В процессе:</h2>
+                <ul class='task-in-progress task_list'>
+                    
+                </ul>
+                <button class="button_clear" id="button-clear-in-progress">Очистить все</button>
+            </div>
+    
+            <div class="task">
+                <h2>Готово:</h2>
+                <ul class='task-done task_list'>
+                    
+                </ul>
+                <button class="button_clear" id="button-clear-done">Очистить все</button>
+            </div>
+        </div>
+        <div class="overlay"></div>
+        <div class="modal">
+            <p class="modal_text">Уверен(а)?</p>
+            <button id='yes'>Да</button>
+            <button class='button_exit'>Нет</button>
+        </div>
+        <div class="modal">
+            <p class="modal_text">Ничего не забыл(а)?</p>
+            <button class='button_exit'>A, блин!</button>
+        </div>
+        <div class="modal">
+            <p class="modal_text">Слишком много задач! Выполни сначала эти.</p>
+            <button class='button_exit'>Ну, ладно!</button>
+        </div>
+    </div>
+</body>
+</html>
