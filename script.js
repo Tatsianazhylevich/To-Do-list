@@ -31,27 +31,6 @@ buttonAddTask.addEventListener('click', function() {
         modal[1].style.display = 'block';
         overlay.style.display = 'block';
     }
-    
-});
-
-// добавляем действие для кнопки "Очистить все"
-buttonClearAll.forEach(function(button){
-    button.addEventListener('click', function(){
-        // запрос на подтверждение для задачи в процессе
-        if(button.id === 'button-clear-in-progress'){
-            modal[0].style.display = 'block';
-            overlay.style.display = 'block';
-            buttonYes.addEventListener('click', function(){
-                taskInProgress.innerHTML = '';
-                modal[0].style.display = 'none';
-                overlay.style.display = 'none';
-            })
-        } else if(button.id === 'button-clear-todo'){ 
-            taskListTodo.innerHTML = '';
-        }else{
-            taskDone.innerHTML = '';
-        }  
-    });
 });
 
 // создаем новую задачу
@@ -117,6 +96,27 @@ function createNewTask(newDate, newTask) {
    })
   
 }
+
+// добавляем действие для кнопки "Очистить все"
+buttonClearAll.forEach(function(button){
+    button.addEventListener('click', function(){
+        // запрос на подтверждение для задачи в процессе
+        if(button.id === 'button-clear-in-progress'){
+            modal[0].style.display = 'block';
+            overlay.style.display = 'block';
+            buttonYes.addEventListener('click', function(){
+                taskInProgress.innerHTML = '';
+                modal[0].style.display = 'none';
+                overlay.style.display = 'none';
+            })
+        } else if(button.id === 'button-clear-todo'){ 
+            taskListTodo.innerHTML = '';
+        }else{
+            taskDone.innerHTML = '';
+        }  
+    });
+});
+
 
 // добавляем действие для кнопки закрытия модальных окон
 buttonExit.forEach(function(item){
