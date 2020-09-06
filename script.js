@@ -41,7 +41,6 @@ function createNewTask(newDate, newTask) {
 
     let taskText = document.createElement('p');
     taskText.classList.add('task_text');
-    task.appendChild(taskText);
     taskText.append(newTask);
 
     let taskDate = document.createElement('p');
