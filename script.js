@@ -33,19 +33,30 @@ buttonAddTask.addEventListener('click', function() {
     }
 });
 
+
 // создаем новую задачу
 function createNewTask(newDate, newTask) {
     let task = document.createElement('li');
     task.classList.add('task_item');
     taskListTodo.append(task);
 
+    let textBox = document.createElement('div');
+    textBox.classList.add('text_box');
+    task.append(textBox);
+
+    let buttonBox = document.createElement('div');
+    buttonBox.classList.add('button_box');
+    task.append(buttonBox);
+
     let taskText = document.createElement('p');
     taskText.classList.add('task_text');
     taskText.append(newTask);
+    textBox.append(taskText);
 
     let taskDate = document.createElement('p');
     taskDate.classList.add('task_date');
     taskDate.append(newDate);
+    textBox.append(taskDate);
 
     //  добавляем кнопки 
     let buttonArrowRight = document.createElement('span');
@@ -53,7 +64,8 @@ function createNewTask(newDate, newTask) {
 
     let buttonTrash = document.createElement('span');
     buttonTrash.classList.add('trash');
-    task.append(taskDate, taskText, buttonArrowRight, buttonTrash);
+    buttonBox.append(buttonArrowRight, buttonTrash);
+    
 
     // действие для кнопки удаления задачи
     buttonTrash.addEventListener('click', function(){
@@ -96,6 +108,16 @@ function createNewTask(newDate, newTask) {
   
 }
 
+// добавляем действие для кнопки закрытия модальных окон
+buttonExit.forEach(function(item){
+    item.addEventListener('click', function() {
+        modal[0].style.display = 'none';
+        modal[1].style.display = 'none';
+        modal[2].style.display = 'none';
+        overlay.style.display = 'none';
+    });
+});
+        
 // добавляем действие для кнопки "Очистить все"
 buttonClearAll.forEach(function(button){
     button.addEventListener('click', function(){
@@ -115,24 +137,4 @@ buttonClearAll.forEach(function(button){
         }  
     });
 });
-
-
-// добавляем действие для кнопки закрытия модальных окон
-buttonExit.forEach(function(item){
-    item.addEventListener('click', function() {
-        modal[0].style.display = 'none';
-        modal[1].style.display = 'none';
-        modal[2].style.display = 'none';
-        overlay.style.display = 'none';
-    });
-});
-        
    
-    
-
-
-
-
-
-
-
