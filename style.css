@@ -117,13 +117,13 @@ body {
 }
 .arrow-left{
     width: 100%;
-    background: url(../img/arrow-left.png) no-repeat center/ 100%;
+    background: url(./img/arrow-left.png) no-repeat center/ 100%;
     filter: invert();
 }
 
 .trash{
     width: 100%;
-    background: url(../img/delete.png) no-repeat center/ 100%;
+    background: url(./img/delete.png) no-repeat center/ 100%;
     filter: invert();
 }
 
