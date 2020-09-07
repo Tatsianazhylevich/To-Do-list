@@ -104,6 +104,7 @@ body {
 
 .task_text{
     font-size: 30px;
+    word-wrap: break-word;
 }
 
 .task_text:hover, .arrow-right:hover, .arrow-right-in-progress:hover, .arrow-left:hover, .trash:hover{
