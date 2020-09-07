@@ -67,6 +67,7 @@ body {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin-bottom: 12vh;
 }
 
 .task{
@@ -94,7 +95,7 @@ body {
 
 .button_box{
     flex-grow: 1;
-    min-width: 35px;
+    min-width: 45px;
     display: flex;
     justify-content: space-around;
 }
