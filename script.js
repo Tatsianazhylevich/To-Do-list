@@ -35,7 +35,7 @@ buttonAddTask.addEventListener('click', function() {
 
 
 // создаем новую задачу
-function createNewTask(newDate, newTask) {
+function createNewTask(date, text) {
     let task = document.createElement('li');
     task.classList.add('task_item');
     taskListTodo.append(task);
@@ -50,12 +50,12 @@ function createNewTask(newDate, newTask) {
 
     let taskText = document.createElement('p');
     taskText.classList.add('task_text');
-    taskText.append(newTask);
+    taskText.append(document.createTextNode(text));
     textBox.append(taskText);
 
     let taskDate = document.createElement('p');
     taskDate.classList.add('task_date');
-    taskDate.append(dateReverse(newDate));
+    taskDate.append(document.createTextNode(dateReverse(date)));
     textBox.append(taskDate);
 
     //  добавляем кнопки 
