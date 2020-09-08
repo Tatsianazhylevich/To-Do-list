@@ -140,5 +140,6 @@ buttonClearAll.forEach(function(button){
    
 // изменяем чтение формата даты   
 function dateReverse(date){
-    let newDate = date.split('-');
+	let newDate = date.split('-');
 	return newDate.reverse().join('-');
+}
