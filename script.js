@@ -55,7 +55,7 @@ function createNewTask(newDate, newTask) {
 
     let taskDate = document.createElement('p');
     taskDate.classList.add('task_date');
-    taskDate.append(newDate);
+    taskDate.append(dateReverse(newDate));
     textBox.append(taskDate);
 
     //  добавляем кнопки 
@@ -138,3 +138,7 @@ buttonClearAll.forEach(function(button){
     });
 });
    
+// изменяем чтение формата даты   
+function dateReverse(date){
+    let newDate = date.split('-');
+	return newDate.reverse().join('-');
