@@ -25,8 +25,7 @@ let buttonYes = document.querySelector('#yes');
 buttonAddTask.addEventListener('click', function() {
     if(inputTask.value !== "" && inputDate.value !== "") {
         createNewTask(inputDate.value, inputTask.value);
-        inputTask.value = "";
-        inputDate.value = "";
+        inputReset();
     } else {
         modal[1].style.display = 'block';
         overlay.style.display = 'block';
@@ -142,4 +141,11 @@ buttonClearAll.forEach(function(button){
 function dateReverse(date){
 	let newDate = date.split('-');
 	return newDate.reverse().join('-');
+}
+
+// функция очистки полей
+function inputReset(){
+    inputTask.value = "";
+    inputDate.value = "";
+    return;
 }
