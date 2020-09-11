@@ -24,7 +24,7 @@ let buttonYes = document.querySelector('#yes');
 // Добавляем элемент в список "Задачи"
 buttonAddTask.addEventListener('click', function() {
     if(inputTask.value !== "" && inputDate.value !== "") {
-        createNewTask(`${inputDate.value}`, `${inputTask.value}`);
+        createNewTask(inputDate.value, inputTask.value);
         inputTask.value = "";
         inputDate.value = "";
     } else {
